@@ -95,6 +95,9 @@ body {
   &--white {
     color: #fff;
   }
+  @media (max-width: 968px) {
+    font-size: 48px;
+  }
 }
 
 .title_h3 {

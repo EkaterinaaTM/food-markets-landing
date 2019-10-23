@@ -1,14 +1,14 @@
-@import '../var.scss';
-@import '../mixins.scss';
+@import "../var.scss";
+@import "../mixins.scss";
 
 .feedbacks {
   margin-bottom: 80px;
   position: relative;
 
   // &_wrapper {
-    // display: flex;
-    // justify-content: center;
-    // flex-wrap: wrap;
+  // display: flex;
+  // justify-content: center;
+  // flex-wrap: wrap;
   // }
 
   &_item {
@@ -39,11 +39,11 @@
       margin-top: 16px;
       cursor: pointer;
       &::after {
-      content: '>';
-      display: inline;
-      margin-left: 8px;
-      vertical-align: middle;
-    }
+        content: ">";
+        display: inline;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -56,7 +56,7 @@
     font-size: 20px;
     line-height: 26px;
   }
-  
+
   &_sandwich {
     @include parallax;
     top: 60%;
@@ -66,6 +66,17 @@
     @include parallax;
     top: 0%;
     right: -10%;
+  }
+  @media (max-width: 576px) {
+    &_item {
+      padding: 80px 24px 24px 24px;
+      &_text {
+        margin-top: 0px;
+      }
+      &_read-more {
+        margin-top: 8px;
+      }
+    }
   }
 }
 
@@ -83,6 +94,7 @@
   transform: translate3d(-2254px, 0px, 0px);
 }
 
-.next:hover, #next:hover {
+.next:hover,
+#next:hover {
   fill: green;
 }
