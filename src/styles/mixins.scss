@@ -1,0 +1,45 @@
+@mixin parallax {
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-50%);
+  margin: 0;
+  width: calc((100% - 970px) / 2);
+  display: block;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@mixin color-word {
+  span {
+    color: $main-color;
+  }
+  .dark {
+    color: $dark-title;
+  }
+}
+
+@mixin font($font-size, $line-height, $font-family: "Circe") {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family, sans-serif;
+}
+
+@mixin flex(
+  $flex-direction,
+  $justify,
+  $align-items: stretch,
+  $flex-wrap: no-wrap
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+}

@@ -1,0 +1,99 @@
+@import "../var.scss";
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+
+  &_title {
+    max-width: 800px;
+  }
+
+  &_tabs {
+    max-width: 890px;
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &_cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 1300px) {
+      justify-content: center;
+    }
+  }
+
+  &_item {
+    width: 290px;
+    height: 350px;
+    margin-bottom: 48px;
+    margin-right: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &_img {
+      position: relative;
+      width: 278px;
+      height: 247px;
+      border-radius: 10px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      img {
+        max-width: 260px;
+        max-height: 240px;
+      }
+    }
+
+    &_line {
+      width: 100%;
+      height: 1px;
+      background-color: $dark-main-color;
+      // margin-top: 26px;
+      transition: 0.5s;
+
+      &--active {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.fade {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+  color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_bzy {
+    min-width: 180px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &:hover {
+    color: #fff;
+    background-color: rgba($color: #0f5d35, $alpha: 0.9);
+  }
+}

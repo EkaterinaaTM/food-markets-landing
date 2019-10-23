@@ -1,0 +1,44 @@
+@import "../mixins.scss";
+
+.partners {
+  position: relative;
+  &_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    // @media(max-width: 768px) {
+    //   justify-content: center;
+    // }
+
+    &_item {
+      margin-bottom: 72px;
+      min-width: 25%;
+      display: flex;
+      justify-content: center;
+      filter: contrast(0%);
+      transition: filter 0.4s;
+
+      &:hover {
+        filter: contrast(100%);
+      }
+
+      @media (max-width: 667px) {
+        margin-right: 24px;
+      }
+    }
+  }
+  &_tomato {
+    @include parallax;
+    top: 80%;
+    right: -10%;
+  }
+}
+
+.slick-track {
+  width: 100%;
+  display: flex;
+  transform: translate3d(0px, 0px, 0px);
+  flex-wrap: wrap;
+}

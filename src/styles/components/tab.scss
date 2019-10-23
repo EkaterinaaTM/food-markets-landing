@@ -1,0 +1,23 @@
+.tab {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 24px;
+  padding: 10px 32px;
+  color: #fff;
+  transition: 0.6s;
+  margin-bottom: 24px;
+  // margin-right: 24px;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+  // &:last-child {
+  //   margin-right: 0;
+  // }
+  &--active {
+    border: 1px solid $dark-main-color;
+    background-color: $dark-main-color;
+  }
+}

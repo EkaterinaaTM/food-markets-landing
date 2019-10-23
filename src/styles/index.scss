@@ -1,0 +1,235 @@
+@import "var.scss";
+@import "utils/normalize.scss";
+@import "utils/reset.scss";
+@import "./mixins.scss";
+
+@import "./components/tab.scss";
+@import "./components/button.scss";
+@import "./components/input.scss";
+@import "./components/popUp.scss";
+
+@import "./components/header.scss";
+@import "./components/main.scss";
+@import "./components/achievements.scss";
+@import "./components/kiosks.scss";
+@import "./components/founderComment.scss";
+@import "./components/benefits.scss";
+@import "./components/partners.scss";
+@import "./components/menu.scss";
+@import "./components/form.scss";
+@import "./components/feedbacks.scss";
+@import "./components/team.scss";
+@import "./components/faq.scss";
+@import "./components/bottomForm.scss";
+@import "./components/contacts-block.scss";
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+@font-face {
+  font-family: "Circe-light", sans-serif;
+  src: url("../../static/fonts/Circe-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Circe", sans-serif;
+  src: url("../../static/fonts/Circe-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Circe-Bold", sans-serif;
+  src: url("../../static/fonts/Circe-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Circe-ExtraBold", sans-serif;
+  src: url("../../static/fonts/Circe-ExtraBold.ttf") format("opentype");
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $light-gray;
+  font-family: "Circe", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  color: $black-color;
+  scroll-behavior: smooth;
+  // text-rendering: optimizeSpeed;
+}
+
+.container {
+  max-width: 1285px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1300px) {
+    padding: 0 24px;
+  }
+}
+
+.app-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.title_h1 {
+  @include font(80px, 100%, "Circe-ExtraBold");
+  margin-bottom: 32px;
+  @include color-word;
+
+  @media (max-width: 968px) {
+    font-size: 40px;
+  }
+}
+
+.title_h2 {
+  @include font(62px, 100%, "Circe-ExtraBold");
+  text-align: center;
+  margin-bottom: 64px;
+  padding-top: 24px;
+  @include color-word;
+  &--white {
+    color: #fff;
+  }
+}
+
+.title_h3 {
+  @include font(50px, 130%, "Circe-ExtraBold");
+  margin: 16px 0;
+  color: $black-color;
+  @include color-word;
+  &--light {
+    font-family: "Circe-light", sans-serif;
+  }
+  &--white {
+    color: #fff;
+  }
+  @media (max-width: 576px) {
+    font-size: 44px;
+  }
+}
+
+.title_h4 {
+  @include font(34px, 140%, "Circe-ExtraBold");
+  text-align: center;
+  margin-bottom: 34px;
+  @include color-word;
+}
+
+.title_h5 {
+  @include font(28px, 120%, "Circe-ExtraBold");
+  color: $black-color;
+  margin: 16px 0;
+  &--white {
+    color: #fff;
+  }
+}
+
+.subtitle {
+  @include font(20px, 120%, "Circe-Bold");
+  color: $text-color;
+  &--white {
+    color: #fff;
+  }
+  &--black {
+    color: $black-color;
+  }
+}
+
+.text {
+  @include font(18px, 140%);
+  color: $text-color;
+  span {
+    color: $main-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &--bold {
+    @include font(18px, 140%, "Circe-Bold");
+  }
+  &--black {
+    color: $black-color;
+  }
+  &--green {
+    color: $main-color;
+  }
+  &--white {
+    color: #fff;
+  }
+}
+
+.link {
+  @include font(12px, 140%, "Circe-ExtraBold");
+  cursor: pointer;
+  &--green {
+    color: $main-color;
+    border-bottom: 1px solid $main-color;
+    cursor: pointer;
+
+    span {
+      display: inline;
+      @include font(12px, 140%, "Circe-ExtraBold");
+      color: $text-color;
+      border-bottom: none;
+    }
+  }
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+.mr-32 {
+  margin-right: 32px;
+}
+.ml-32 {
+  margin-left: 32px;
+}
+.mb-56 {
+  margin-bottom: 56px;
+}
+
+.line {
+  width: 100%;
+  height: 6px;
+  background-color: #fff;
+  margin-bottom: 80px;
+
+  &--black {
+    background-color: $black-color;
+  }
+}
+
+.bg {
+  &_1 {
+    background-image: url("../images/bg1.svg");
+    background-position: 50% -85%;
+  }
+  &_2 {
+    background: url("../images/bg2.svg") 56% 45%;
+  }
+  &_3 {
+    background: url("../images/bg3.svg") 50% 62% no-repeat;
+  }
+
+  @media (max-width: 1340px) {
+    &_1 {
+      background-position: 50% 10%;
+    }
+    &_2,
+    &_3 {
+      background: none;
+    }
+  }
+}

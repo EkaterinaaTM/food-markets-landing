@@ -1,0 +1,61 @@
+.founder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  position: relative;
+  padding: 16px; // delete this
+
+  &_img-wrapper {
+    max-width: 367px;
+    max-height: 367px;
+    margin-right: 10px;
+    margin-bottom: 24px;
+  }
+
+  &_info {
+    
+    &_wrapper {
+      background: url('../../images/founderComment-bg.svg') no-repeat;
+      padding: 56px 96px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 690px;
+      min-height: 520px;
+      @media(max-width: 768px) {
+        background-color: #fff;
+      }
+    }
+
+    &_comment {
+      margin: 24px 0;
+    }
+
+    &_line {
+      width: 100%;
+      height: 2px;
+      background-color: $light-gray;
+      margin: 28px 0;
+    }
+
+    &_preview_link {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        margin-right: 16px;
+      }
+    }
+  }
+  @media(max-width: 667px) {
+    padding: 0;
+    &_info_wrapper {
+      padding: 32px;
+    }
+  }
+}

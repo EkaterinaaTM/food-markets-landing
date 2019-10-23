@@ -1,0 +1,32 @@
+@import "../var.scss";
+
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  font-family: "Circe-Bold", sans-serif;
+
+  &--sm {
+    width: 240px;
+  }
+  &--md {
+    width: 258px;
+  }
+  &--lg {
+    width: 300px;
+  }
+  &--green {
+    color: #fff;
+    background-color: $main-color;
+    border-bottom: 4px solid $dark-main-color;
+  }
+  &--white {
+    color: #000;
+    background-color: #fff;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 4px solid #000;
+  }
+}

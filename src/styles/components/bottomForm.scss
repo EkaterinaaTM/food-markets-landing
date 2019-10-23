@@ -1,0 +1,78 @@
+@import '../var.scss';
+
+.bottom-form {
+  // width: 100%;
+  background: url('../../images/bottom-from-bg.svg') no-repeat;
+  margin: 0 48px 80px 48px;
+  color: $black-color;
+  padding: 32px 48px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 750px;
+  z-index: 1;
+
+  &_inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    text-align: center;
+
+    button, input {
+      margin-bottom: 24px;
+      margin-right: 16px;
+    }
+    input:last-child {
+      margin-right: 0;
+    }
+
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      
+      &--submitted {
+        display: none;
+      }
+    }
+  }
+
+  &_agreement {
+    max-width: 570px;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  &_submit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media(max-width: 1240px) {
+    background-color: #fff;
+    margin: 0 0 40px 0;
+    padding: 32px;
+    &_inputs, &_submit {
+      justify-content: center;
+    }
+  }
+  @media(max-width: 1020px) {
+    width: 90%;
+  }
+
+  @media(max-width: 687px) {
+    margin-right: 24px;
+    button, input {
+      margin-right: 0;
+    }
+  }
+
+  @media(max-width: 500px) {
+    bottom: 1200px;
+  }
+}

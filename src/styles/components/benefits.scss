@@ -1,0 +1,33 @@
+@import '../mixins.scss';
+
+.benefits {
+  position: relative;
+  &_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 95%;
+    margin: 0 auto;
+    
+    @media(max-width: 768px) {
+      justify-content: center;
+    }
+    
+    &_item {
+      max-width: 308px;
+      max-height: 213px;
+      margin-bottom: 76px;
+    }
+  }
+  &_sandwich-left {
+    @include parallax;
+    top: 6%;
+    right: 0;
+  }
+  &_coffe-cup {
+    @include parallax;
+    top: 70%;
+    left: -24%;
+  }
+}

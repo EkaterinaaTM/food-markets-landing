@@ -1,0 +1,30 @@
+@import "../mixins.scss";
+
+.achievements {
+  @include flex(row, space-between, $flex-wrap: wrap);
+  padding: 0 72px;
+  margin-bottom: 80px;
+  .title_h3 {
+    font-size: 40px;
+  }
+
+  &_block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    min-height: 176px;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  @media (max-width: 1340px) {
+    padding: 0;
+  }
+}

@@ -1,0 +1,66 @@
+@import '../var.scss';
+
+.form {
+  background: url('../../images/form-bg.svg') no-repeat;
+  margin: 0 48px 80px 48px;
+  color: $black-color;
+  padding: 48px;
+  border-radius: 10px;
+
+  &_inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    text-align: center;
+
+    &--sumbitted {
+      display: none;
+    }
+
+    button, input {
+      margin-bottom: 24px;
+      margin-right: 16px;
+    }
+
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &_success-msg {
+    display: none;
+
+    &--visible {
+      display: block;
+      text-align: center;
+      margin-bottom: 32px;
+      ;
+    }
+  }
+
+  &_agreement {
+    max-width: 628px;
+    text-align: center;
+  }
+
+  @media(max-width: 1240px) {
+    background: #fff;
+    margin: 0 0 80px 0;
+
+    &_inputs {
+      justify-content: center;
+    }
+  }
+
+  @media(max-width: 740px) {
+    padding: 32px;
+    button, input {
+      margin-right: 0;
+    }
+  }
+}
